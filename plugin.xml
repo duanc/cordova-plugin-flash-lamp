@@ -30,7 +30,7 @@
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FlashLampPlugin">
-                <param name="android-package" value="co.airsia.cordova.FlashLamp"/>
+                <param name="android-package" value="co.airsia.cordova.FlashLampPlugin"/>
             </feature>
         </config-file>
 
