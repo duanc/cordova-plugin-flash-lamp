@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="co.airsia.cordova.flashlamp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        version="0.0.5">
+
+    <name>flashlamp</name>
+
+    <description>cordova plugin for flashlamp</description>
+
+    <author>tongChia@Airsia.co</author>
+
+    <keywords>flashlamp,flash,lamp</keywords>
+
+    <license>Apache 2.0</license>
+
+    <!--<preference name="URL_SCHEME" />-->
+
+    <engines>
+        <engine name="cordova" version=">=3.4.0"/>
+    </engines>
+
+    <!--<asset src="www/pingpp.js" target="js/pingpp.js"/>-->
+
+    <!--<js-module src="www/pingpp.js" name="pingpp">-->
+        <!--<clobbers target="pingpp" />-->
+    <!--</js-module>-->
+
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="flashlamp">
+                <param name="android-package" value="co.airsia.cordova.FlashLamp"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.FLASHLIGHT" />
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-feature android:name="android.hardware.camera" />
+            <uses-feature android:name="android.hardware.autofocus" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="application">
+            <!--<activity-->
+                    <!--android:name="com.pingplusplus.android.PaymentActivity"-->
+                    <!--android:launchMode="singleTop"-->
+                    <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+            <activity
+                    android:name=".MainActivity"
+                    android:label="灯光控制"
+                    android:theme="@style/AppTheme.NoActionBar">
+            </activity>
+        </config-file>
+
+        <!--<source-file src="src/android/PingppPlugin.java" target-dir="src/co/airsia/cordova/"/>-->
+        <!--<source-file src="libs/android/alipaysdk.jar" target-dir="libs" framework="true"/>-->
+        <!--<source-file src="libs/android/alipaysecsdk.jar" target-dir="libs" framework="true"/>-->
+        <!--<source-file src="libs/android/alipayutdid.jar" target-dir="libs" framework="true"/>-->
+        <!--<source-file src="libs/android/libammsdk.jar" target-dir="libs" framework="true"/>-->
+        <!--<source-file src="libs/android/libpingpp.jar" target-dir="libs" framework="true"/>-->
+        <!--<source-file src="libs/android/UPPayAssistEx.jar" target-dir="libs" framework="true"/>-->
+    </platform>
+    <!--<platform name="ios">-->
+        <!--&lt;!&ndash; framework &ndash;&gt;-->
+        <!--<framework src="CFNetwork.framework" />-->
+        <!--<framework src="SystemConfiguration.framework" />-->
+        <!--<framework src="Security.framework" />-->
+        <!--<framework src="libc++.dylib" />-->
+        <!--<framework src="libz.dylib" />-->
+        <!--<framework src="libsqlite3.0.dylib" />-->
+
+        <!--&lt;!&ndash; Channels &ndash;&gt;-->
+        <!--&lt;!&ndash; Alipay &ndash;&gt;-->
+        <!--<resource-file src="libs/ios/Channels/Alipay/AlipaySDK.bundle"/>-->
+        <!--<framework src="libs/ios/Channels/Alipay/AlipaySDK.framework" custom="true"/>-->
+        <!--<source-file src="libs/ios/Channels/Alipay/libpingpp+alipay.a" framework="true"/>-->
+
+        <!--&lt;!&ndash; wx &ndash;&gt;-->
+        <!--<source-file src="libs/ios/Channels/Wx/libpingpp+wx.a" framework="true"/>-->
+        <!--<source-file src="libs/ios/Channels/Wx/libWeChatSDK.a" framework="true"/>-->
+        <!--<header-file src="libs/ios/Channels/Wx/WXApi.h" />-->
+        <!--<header-file src="libs/ios/Channels/Wx/WXApiObject.h" />-->
+
+        <!--&lt;!&ndash; UnionPay &ndash;&gt;-->
+        <!--<source-file src="libs/ios/Channels/UnionPay/libpingpp+up.a" framework="true"/>-->
+        <!--<source-file src="libs/ios/Channels/UnionPay/libUPPayPlugin.a" framework="true"/>-->
+
+        <!--&lt;!&ndash; ApplePay &ndash;&gt;-->
+        <!--<source-file src="libs/ios/Channels/ApplePay/libpingpp+applepay.a" framework="true"/>-->
+        <!--<header-file src="libs/ios/Channels/ApplePay/Pingpp+ApplePay.h" />-->
+
+        <!--&lt;!&ndash; pingxx &ndash;&gt;-->
+        <!--<resource-file src="libs/ios/Pingpp.bundle"/>-->
+        <!--<source-file src="libs/ios/libpingpp.a" framework="true"/>-->
+        <!--<header-file src="libs/ios/Pingpp.h"/>-->
+
+        <!--<config-file target="*-Info.plist" parent="CFBundleURLTypes">-->
+            <!--<array>-->
+                <!--<dict>-->
+                    <!--<key>CFBundleURLSchemes</key>-->
+                    <!--<array>-->
+                        <!--<string>$URL_SCHEME</string>-->
+                    <!--</array>-->
+                <!--</dict>-->
+            <!--</array>-->
+        <!--</config-file>-->
+
+        <!--<config-file target="config.xml" parent="/widget">-->
+            <!--<feature name="PingppPlugin">-->
+                <!--<param name="ios-package" value="PingppPlugin"/>-->
+            <!--</feature>-->
+        <!--</config-file>-->
+
+        <!--<header-file src="src/ios/PingppPlugin.h" target-dir="PingppPlugin"/>-->
+        <!--<source-file src="src/ios/PingppPlugin.m" target-dir="PingppPlugin"/>-->
+    <!--</platform>-->
+</plugin>
