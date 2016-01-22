@@ -17,7 +17,7 @@ public class FlashLampPlugin extends CordovaPlugin {
     private CallbackContext callbackContext;
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
 //        this.callbackContext = callbackContext;
 //        Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
