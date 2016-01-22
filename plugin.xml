@@ -20,11 +20,11 @@
         <engine name="cordova" version=">=3.4.0"/>
     </engines>
 
-    <!--<asset src="www/pingpp.js" target="js/pingpp.js"/>-->
+    <asset src="www/pingpp.js" target="js/pingpp.js"/>
 
-    <!--<js-module src="www/pingpp.js" name="pingpp">-->
-        <!--<clobbers target="pingpp" />-->
-    <!--</js-module>-->
+    <js-module src="www/pingpp.js" name="pingpp">
+        <clobbers target="pingpp" />
+    </js-module>
 
     <platform name="android">
 
