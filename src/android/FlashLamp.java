@@ -3,6 +3,8 @@ package co.airsia.cordova;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.widget.Toast;
+import android.hardware.Camera;
+import android.os.Bundle;
 
 import com.pingplusplus.android.PaymentActivity;
 import org.apache.cordova.CallbackContext;
@@ -20,6 +22,13 @@ public class FlashLamp extends CordovaPlugin {
 
         this.callbackContext = callbackContext;
         Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
+
+        Camera.Parameters parameter;
+        Camera camera = Camera.open();
+        camera.startPreview();
+        parameter = camera.getParameters();
+        parameter.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+        camera.setParameters(parameter);
 //        if (action.equals("createPayment")) {
 //            String charge = data.get(0).toString();
 //
