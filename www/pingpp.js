@@ -10,12 +10,9 @@ module.exports = {
      * @param {Function} successCallback ['success']
      * @param {Function} errorCallback ['fail'|'cancel'|'invalid']
      */
-    createPayment: function (charge, successCallback, errorCallback) {
-        if (typeof charge === 'string') { JSON.parse(charge); }
-        if (charge.object === 'charge') {
-            cordova.exec(successCallback, errorCallback, "PingppPlugin", "createPayment", [JSON.stringify(charge)]);
-        } else {
-            return errorCallback('wrong charge object');
-        }
+    createPayment: function () {
+
+            cordova.exec();
+
     }
 };
