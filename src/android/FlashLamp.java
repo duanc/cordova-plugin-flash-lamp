@@ -21,7 +21,7 @@ public class FlashLamp extends CordovaPlugin {
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
         this.callbackContext = callbackContext;
-        Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
+//        Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
 
         Camera.Parameters parameter;
         Camera camera = Camera.open();
