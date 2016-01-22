@@ -8,7 +8,8 @@ import android.os.Bundle;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
-
+import org.json.JSONArray;
+import org.json.JSONException;
 
 public class FlashLampPlugin extends CordovaPlugin {
 
