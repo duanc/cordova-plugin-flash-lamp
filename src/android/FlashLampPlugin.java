@@ -15,19 +15,25 @@ public class FlashLampPlugin extends CordovaPlugin {
 
     private static final int REQUEST_CODE_PAYMENT = 1;
     private CallbackContext callbackContext;
+    Camera.Parameters parameter;
+    Camera camera = Camera.open();
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
         this.callbackContext = callbackContext;
         Toast.makeText(this.cordova.getActivity(),action,Toast.LENGTH_SHORT).show();
-
-        Camera.Parameters parameter;
-        Camera camera = Camera.open();
-        camera.startPreview();
-        parameter = camera.getParameters();
-        parameter.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
-        camera.setParameters(parameter);
+        String isOpen = data.get(0).toString();
+        if(isOpen.equals("true")){
+            camera.startPreview();
+            parameter = camera.getParameters();
+            parameter.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
+            camera.setParameters(parameter);
+        }else {
+            parameter = camera.getParameters();
+            parameter.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
+            camera.setParameters(parameter);
+        }
         return true;
 //        if (action.equals("createPayment")) {
 //            String charge = data.get(0).toString();
