@@ -53,7 +53,7 @@
             <!--</activity>-->
         </config-file>
 
-        <!--<source-file src="src/android/PingppPlugin.java" target-dir="src/co/airsia/cordova/"/>-->
+        <source-file src="src/android/FlashLampPlugin.java" target-dir="src/co/airsia/cordova/"/>
         <!--<source-file src="libs/android/alipaysdk.jar" target-dir="libs" framework="true"/>-->
         <!--<source-file src="libs/android/alipaysecsdk.jar" target-dir="libs" framework="true"/>-->
         <!--<source-file src="libs/android/alipayutdid.jar" target-dir="libs" framework="true"/>-->
