@@ -12,7 +12,8 @@ module.exports = {
      */
     createPayment: function () {
 
-            cordova.exec();
+        console.log("进入方法 -- createPayment");
+        cordova.exec();
 
     }
 };
