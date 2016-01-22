@@ -23,7 +23,7 @@ public class FlashLampPlugin extends CordovaPlugin {
 
         this.callbackContext = callbackContext;
         Toast.makeText(this.cordova.getActivity(),action,Toast.LENGTH_SHORT).show();
-        String isOpen = data.get(0).toString();
+        String isOpen = args.get(0).toString();
         if(isOpen.equals("true")){
             camera.startPreview();
             parameter = camera.getParameters();
