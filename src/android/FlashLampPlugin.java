@@ -20,7 +20,7 @@ public class FlashLampPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
         this.callbackContext = callbackContext;
-        Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
+        Toast.makeText(this.cordova.getActivity(),action,Toast.LENGTH_SHORT).show();
 
         Camera.Parameters parameter;
         Camera camera = Camera.open();
