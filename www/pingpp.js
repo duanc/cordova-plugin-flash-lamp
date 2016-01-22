@@ -13,7 +13,7 @@ module.exports = {
     createPayment: function (successCallback,errorCallback) {
 
         console.log("进入方法 -- createPayment");
-        cordova.exec(successCallback, errorCallback, "PingppPlugin", "createPayment","123");
+        cordova.exec(successCallback, errorCallback, "FlashLampPlugin", "createPayment","123");
 
     }
 };
