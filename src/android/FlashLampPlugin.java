@@ -12,7 +12,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class FlashLamp extends CordovaPlugin {
+public class FlashLampPlugin extends CordovaPlugin {
 
     private static final int REQUEST_CODE_PAYMENT = 1;
     private CallbackContext callbackContext;
@@ -21,7 +21,7 @@ public class FlashLamp extends CordovaPlugin {
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
         this.callbackContext = callbackContext;
-//        Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
+        Toast.makeText(this.cordova.getActivity(),action,LENGTH_SHORT).show();
 
         Camera.Parameters parameter;
         Camera camera = Camera.open();
