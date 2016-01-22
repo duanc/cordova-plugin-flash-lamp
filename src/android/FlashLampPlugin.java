@@ -22,14 +22,16 @@ public class FlashLampPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
         this.callbackContext = callbackContext;
-        Toast.makeText(this.cordova.getActivity(),action,Toast.LENGTH_SHORT).show();
+
         String isOpen = args.get(0).toString();
         if(isOpen.equals("true")){
+            Toast.makeText(this.cordova.getActivity(),"开启手电筒",Toast.LENGTH_SHORT).show();
             camera.startPreview();
             parameter = camera.getParameters();
             parameter.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
             camera.setParameters(parameter);
         }else {
+            Toast.makeText(this.cordova.getActivity(),"关闭手电筒",Toast.LENGTH_SHORT).show();
             parameter = camera.getParameters();
             parameter.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
             camera.setParameters(parameter);
