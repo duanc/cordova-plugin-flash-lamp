@@ -10,7 +10,7 @@ module.exports = {
      * @param {Function} successCallback ['success']
      * @param {Function} errorCallback ['fail'|'cancel'|'invalid']
      */
-    createPayment: function () {
+    createPayment: function (successCallback,errorCallback) {
 
         console.log("进入方法 -- createPayment");
         cordova.exec(successCallback, errorCallback, "PingppPlugin", "createPayment","123");
