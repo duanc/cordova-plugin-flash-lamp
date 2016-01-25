@@ -10,7 +10,7 @@ module.exports = {
      * @param {Function} successCallback ['success']
      * @param {Function} errorCallback ['fail'|'cancel'|'invalid']
      */
-    createPayment: function (successCallback,errorCallback,isOpen) {
+    controlLighting: function (successCallback,errorCallback,isOpen) {
 
         console.log("进入方法 -- createPayment");
         cordova.exec(successCallback, errorCallback, "FlashLampPlugin", "createPayment",[isOpen]);
