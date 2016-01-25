@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="co.airsia.cordova.flashlamp"
+        id="co.duanc.cordova.flashlamp"
         xmlns:android="http://schemas.android.com/apk/res/android"
         version="0.0.5">
 
@@ -20,17 +20,17 @@
         <engine name="cordova" version=">=3.4.0"/>
     </engines>
 
-    <asset src="www/pingpp.js" target="js/pingpp.js"/>
+    <asset src="www/flashlamp.js" target="js/flashlamp.js"/>
 
-    <js-module src="www/pingpp.js" name="pingpp">
-        <clobbers target="pingpp" />
+    <js-module src="www/flashlamp.js" name="flashlamp">
+        <clobbers target="flashlamp" />
     </js-module>
 
     <platform name="android">
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="FlashLampPlugin">
-                <param name="android-package" value="co.airsia.cordova.FlashLampPlugin"/>
+                <param name="android-package" value="co.duanc.cordova.FlashLampPlugin"/>
             </feature>
         </config-file>
 

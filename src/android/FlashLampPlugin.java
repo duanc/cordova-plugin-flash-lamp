@@ -1,4 +1,4 @@
-package co.airsia.cordova;
+package co.duanc.cordova;
 
 import android.content.ComponentName;
 import android.content.Intent;
