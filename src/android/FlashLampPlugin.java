@@ -1,4 +1,4 @@
-package co.duanc.cordova;
+package com.duanc.cordova;
 
 import android.content.ComponentName;
 import android.content.Intent;
