@@ -1,5 +1,5 @@
-# Cordova Pingpp Plugin
-
+# Cordova FlashLamp Plugin
+# 闪光灯控制插件
 
 
 ##安装插件
