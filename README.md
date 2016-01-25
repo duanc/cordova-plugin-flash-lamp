@@ -14,12 +14,12 @@ $ cordova plugin add https://github.com/duanc/cordova-plugin-flash-lamp.git
 ##使用方法：
 
 ```sh
-  flashlamp.createPayment( 成功回掉, 失败回掉,打开or关闭);
+  flashlamp.controlLighting( 成功回掉, 失败回掉,打开or关闭);
 ```
 
 #打开闪光灯
 ```sh
-  flashlamp.createPayment( function(result){
+  flashlamp.controlLighting( function(result){
         console.log('suc: '+result)  //"success"
       }, function(result){
         console.log('err: '+result)  //"fail"|"cancel"|"invalid"
@@ -27,7 +27,7 @@ $ cordova plugin add https://github.com/duanc/cordova-plugin-flash-lamp.git
 ```
 #关闭闪光灯
 ```sh
-  flashlamp.createPayment( function(result){
+  flashlamp.controlLighting( function(result){
         console.log('suc: '+result)  //"success"
       }, function(result){
         console.log('err: '+result)  //"fail"|"cancel"|"invalid"
